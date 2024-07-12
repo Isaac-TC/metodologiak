@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IngresoK</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="IngresoK.css">
+</head>
+ 
+<body>
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menú</h3>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Productos</a>
+            </li>
+            <li>
+                <a href="#">Dasboard</a>
+            </li>
+            <li>
+                <a href="#">Usuarios</a>
+            </li>
+            <li>
+                <a href="#">Configuración</a>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <nav class="navbar navbar-light bg-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <span>Toggle Menu</span>
+            </button>
+        </nav>
+        <div class="container-fluid">
+            <div id="kardex-table" class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Filas de la tabla aquí -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="action-form">
+                <div class="form-group">
+                    <label for="product">Producto</label>
+                    <input type="text" class="form-control" id="product" placeholder="Nombre del producto">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Cantidad</label>
+                    <input type="number" class="form-control" id="quantity" placeholder="Cantidad">
+                </div>
+                <div class="form-group">
+                    <label for="price">Precio</label>
+                    <input type="number" class="form-control" id="price" placeholder="Precio">
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+            </div>
+            <div id="action-buttons" class="btn-group-vertical">
+                <button type="button" class="btn btn-primary" onclick="addRow()">Agregar</button>
+                <button type="button" class="btn btn-secondary" onclick="editRow()">Editar</button>
+                <button type="button" class="btn btn-success" onclick="saveRow()">Guardar</button>
+                <button type="button" class="btn btn-danger" onclick="deleteRow()">Eliminar</button>
+                <button type="button" class="btn btn-warning" onclick="moveRow()">Mover</button>
+                <button type="button" class="btn btn-info" onclick="clearInputs()">Limpiar</button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="IngresoK.js"></script>
+</body>
+ 
+</html>
+ 
